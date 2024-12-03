@@ -1035,4 +1035,12 @@ const rawInitialList = `38665   13337
   }
 
   const totalfinal = calculDiff(sortedLeft, sortedRight)
-  console.log(totalfinal);
+  // console.log(totalfinal);
+
+  let totalComparaisonSum = 0
+  sortedLeft.forEach((leftnumber) => {
+    const countInRightList = sortedRight.filter(rightnumber => rightnumber === leftnumber).length
+    totalComparaisonSum += leftnumber * countInRightList
+  });
+
+  console.log(totalComparaisonSum);
